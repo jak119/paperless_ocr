@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-    paths-ignore: 
+    paths-ignore:
       - ".github/**"
       - "README.md"
       - "LICENSE"
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   build-and-publish:
