@@ -40,7 +40,7 @@ def get_secrets():
 
 
 @app.function_name(name="ProcessPaperlessDocuments")
-@app.schedule(schedule="0 */4 * * *", arg_name="timer", run_on_startup=True)
+@app.schedule(schedule="0 */36 * * *", arg_name="timer", run_on_startup=True)
 def process_paperless_documents(timer: func.TimerRequest) -> None:
     logging.info("Paperless document processing timer trigger function started")
 
