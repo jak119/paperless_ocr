@@ -16,10 +16,6 @@ app = func.FunctionApp()
 def get_secrets():
     """Get secrets from Azure Key Vault"""
     is_local_dev = os.getenv("IS_LOCAL_DEV", "false").lower() == "true"
-    logging.warning(
-        '"IS_LOCAL_DEV" environment variable is set to %s',
-        os.getenv("IS_LOCAL_DEV").lower(),
-    )
 
     if is_local_dev:
         logging.info("Running in local development mode, using Azure CLI credentials")
